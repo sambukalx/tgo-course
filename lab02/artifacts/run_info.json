@@ -1,0 +1,9 @@
+{
+  "fast": false,
+  "device": "cpu",
+  "seed": 42,
+  "seconds": 277.205277800007,
+  "torch": "2.15.0+cpu",
+  "qwen_revision": null,
+  "e5_revision": null
+}
