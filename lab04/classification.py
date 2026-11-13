@@ -16,6 +16,7 @@ import torch
 MODEL = "Qwen/Qwen3-0.6B"
 MODEL_REVISION = "c1899de289a04d12100db370d81485cdf75e47ca"
 DATASET = "mteb/GeoreviewClassification"
+DATASET_REVISION = "fb29d6137c54550329411023aee45a8ff29f0c62"
 SYSTEM = (
     "Определи оценку автора отзыва об организации. "
     "Шкала: 1 - очень плохо, 2 - плохо, 3 - средне, 4 - хорошо, 5 - отлично. "
@@ -41,7 +42,7 @@ def choose_device() -> torch.device:
 def load_data(path: str | Path | None = None):
     """Прочитать локальный save_to_disk или открытый набор из HF."""
     selected = path or os.environ.get("LAB_DATA")
-    return load_from_disk(str(selected)) if selected else load_dataset(DATASET)
+    return load_from_disk(str(selected)) if selected else load_dataset(DATASET, revision=DATASET_REVISION)
 
 
 def select_balanced(split, per_class: int = 1000, seed: int = 42):
