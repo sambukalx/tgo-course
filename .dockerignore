@@ -1,0 +1,14 @@
+.git
+.venv*
+.course
+**/__pycache__
+**/.ipynb_checkpoints
+**/corpus.txt
+**/*.pt
+coursework/state
+coursework/mlruns
+coursework/eval
+coursework/test_service.py
+coursework/notebooks
+coursework/screenshots
+lab*/artifacts
