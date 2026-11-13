@@ -1,0 +1,9 @@
+# Код и результаты лабораторных одинаково хранятся на Windows и Linux.
+lab??/**/*.py text eol=lf
+lab??/**/*.md text eol=lf
+lab??/**/*.ipynb text eol=lf
+lab??/**/*.json text eol=lf
+lab??/**/*.csv text eol=lf
+*.safetensors -text
+*.png -text
+*.pdf -text
