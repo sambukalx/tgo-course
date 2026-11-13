@@ -38,7 +38,11 @@ def main() -> None:
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return
     print(result['answer'])
-    print(f"Время: {result['seconds']:.2f} с; токенов: {result['generated_tokens']}; проверка: {result['verification']}")
+    print(f"Время: {result['seconds']:.2f} с; токенов: {result['generated_tokens']}; проверяющая модель: {result['verification']}")
+    if result.get('empty_answer'):
+        print('Отказ: модель вернула пустой ответ или одну ссылку.')
+    if result.get('invalid_citations'):
+        print('Отказ: модель сослалась на отсутствующий номер источника.')
     if result['unsupported_claims']:
         print('Не подтверждено:', ' '.join(result['unsupported_claims']))
     for i, source in enumerate(result['sources'], 1):

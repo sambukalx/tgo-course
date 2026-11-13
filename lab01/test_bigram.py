@@ -3,7 +3,7 @@
 import math
 import unittest
 
-from bigram import BigramModel, UNK, tokenize
+from lab01.bigram import BigramModel, UNK, tokenize
 
 
 class BigramTests(unittest.TestCase):

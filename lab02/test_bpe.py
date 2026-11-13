@@ -2,7 +2,7 @@
 
 import unittest
 
-from bpe import BPE, END, merge_pair, tokenize_words
+from lab02.bpe import BPE, END, merge_pair, tokenize_words
 
 
 class BPETests(unittest.TestCase):

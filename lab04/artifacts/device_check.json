@@ -1,0 +1,107 @@
+{
+  "description": "Диагностика аномального XPU-инференса; этот GPU-прогон не использован для итоговой таблицы.",
+  "xpu": {
+    "torch": "2.15.0+xpu",
+    "driver": "32.0.101.6554",
+    "dtype": "torch.bfloat16",
+    "batch": 1,
+    "n_test": 1000,
+    "invalid": {
+      "zero_shot": 0,
+      "few_shot": 850,
+      "adapter": 30
+    },
+    "first_invalid_few_shot": 150
+  },
+  "independent_cpu_controls": {
+    "few_shot": [
+      {
+        "index": 0,
+        "xpu_answer": "4",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 149,
+        "xpu_answer": "4",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 150,
+        "xpu_answer": "\n\n\n",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 151,
+        "xpu_answer": ",,,",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 500,
+        "xpu_answer": ",,,",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 999,
+        "xpu_answer": ",,,",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 0,
+        "xpu_answer": "4",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      }
+    ],
+    "adapter": [
+      {
+        "index": 93,
+        "xpu_answer": "   ",
+        "cpu_answer": "2",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 137,
+        "xpu_answer": " 10",
+        "cpu_answer": "5",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 156,
+        "xpu_answer": "   ",
+        "cpu_answer": "1",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 168,
+        "xpu_answer": "10\n\n",
+        "cpu_answer": "4",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 182,
+        "xpu_answer": "   ",
+        "cpu_answer": "1",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 230,
+        "xpu_answer": "   ",
+        "cpu_answer": "2",
+        "cpu_scores_finite": true
+      },
+      {
+        "index": 241,
+        "xpu_answer": "12\n\n",
+        "cpu_answer": "3",
+        "cpu_scores_finite": true
+      }
+    ]
+  },
+  "conclusion": "Контрольные CPU-запуски на тех же входах дали допустимые цифры. Причина нестабильности XPU окончательно не установлена. Для окончательных метрик выбран полный CPU-прогон всех трех режимов."
+}

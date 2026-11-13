@@ -1,0 +1,88 @@
+[
+  {
+    "run_id": "37ed0ea9ee724d1698f558a06619e173",
+    "status": "FINISHED",
+    "start_time": 1794570656749,
+    "end_time": 1794571072305,
+    "params": {
+      "top_k": "1",
+      "verify": "True",
+      "dataset_sha256": "c5472a201141c0264f1cf3dea7831250b9880c8aa89c2e7b1ef33437702e26ca",
+      "corpus_sha256": "1e8f78854359bef7004b0897142ac4fd25864c56eba80033f437859b4862a668",
+      "model": "Qwen/Qwen3-1.7B",
+      "prompt_version": "en-v2",
+      "implementation_sha256": "87d639f7c0a5ccde37f33c6abed9ee3ee9776578c0c7eb8f5ba4a8049da2cd41",
+      "embedding": "intfloat/multilingual-e5-small",
+      "temperature": "0",
+      "max_new_tokens": "120",
+      "test_examples": "32",
+      "device": "cpu"
+    },
+    "metrics": {
+      "accuracy": 0.5625,
+      "answerable_accuracy": 0.4166666666666667,
+      "correct_refusal_rate": 1.0,
+      "retrieval_recall": 0.7083333333333334,
+      "mean_token_f1": 0.12038544599512216,
+      "accepted_error_rate": 0.4444444444444444,
+      "refusal_rate": 0.4375,
+      "mean_seconds": 12.949722831248891,
+      "max_seconds": 39.94566250000207,
+      "p95_seconds": 27.628186899994034,
+      "generated_tokens": 1245.0,
+      "source_review_hallucination_rate": 0.2777777777777778,
+      "source_review_unsupported_answers": 5.0,
+      "source_review_accepted_answers": 18.0
+    },
+    "tags": {
+      "mlflow.user": "slavc",
+      "mlflow.source.name": "C:\\Users\\slavc\\Documents\\tgo-course\\.venv\\Lib\\site-packages\\ipykernel_launcher.py",
+      "mlflow.source.type": "NOTEBOOK",
+      "mlflow.runName": "qwen3-1.7b-en-v2-k1-verified",
+      "source_review_method": "Сверка конечных ответов с найденными фрагментами и полными исходными разделами, подготовленная с ИИ-ассистентом; не независимая экспертная разметка. Ошибка темы или неполнота не равны галлюцинации. Считается ответ с хотя бы одним неподтвержденным или противоречащим источнику фактическим утверждением среди всех принятых ответов."
+    }
+  },
+  {
+    "run_id": "ca10e5f739994007a421d51c49e2b754",
+    "status": "FINISHED",
+    "start_time": 1794571072322,
+    "end_time": 1794571661082,
+    "params": {
+      "top_k": "3",
+      "verify": "True",
+      "dataset_sha256": "c5472a201141c0264f1cf3dea7831250b9880c8aa89c2e7b1ef33437702e26ca",
+      "corpus_sha256": "1e8f78854359bef7004b0897142ac4fd25864c56eba80033f437859b4862a668",
+      "model": "Qwen/Qwen3-1.7B",
+      "prompt_version": "en-v2",
+      "implementation_sha256": "87d639f7c0a5ccde37f33c6abed9ee3ee9776578c0c7eb8f5ba4a8049da2cd41",
+      "embedding": "intfloat/multilingual-e5-small",
+      "temperature": "0",
+      "max_new_tokens": "120",
+      "test_examples": "32",
+      "device": "cpu"
+    },
+    "metrics": {
+      "accuracy": 0.6875,
+      "answerable_accuracy": 0.5833333333333334,
+      "correct_refusal_rate": 1.0,
+      "retrieval_recall": 0.875,
+      "mean_token_f1": 0.1318093021570219,
+      "accepted_error_rate": 0.3,
+      "refusal_rate": 0.375,
+      "mean_seconds": 18.35848827812424,
+      "max_seconds": 57.05742649998865,
+      "p95_seconds": 55.808362999989185,
+      "generated_tokens": 1072.0,
+      "source_review_hallucination_rate": 0.2,
+      "source_review_unsupported_answers": 4.0,
+      "source_review_accepted_answers": 20.0
+    },
+    "tags": {
+      "mlflow.user": "slavc",
+      "mlflow.source.name": "C:\\Users\\slavc\\Documents\\tgo-course\\.venv\\Lib\\site-packages\\ipykernel_launcher.py",
+      "mlflow.source.type": "NOTEBOOK",
+      "mlflow.runName": "qwen3-1.7b-en-v2-k3-verified",
+      "source_review_method": "Сверка конечных ответов с найденными фрагментами и полными исходными разделами, подготовленная с ИИ-ассистентом; не независимая экспертная разметка. Ошибка темы или неполнота не равны галлюцинации. Считается ответ с хотя бы одним неподтвержденным или противоречащим источнику фактическим утверждением среди всех принятых ответов."
+    }
+  }
+]

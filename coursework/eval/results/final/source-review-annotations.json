@@ -1,0 +1,413 @@
+{
+  "method": "Сверка конечных ответов с найденными фрагментами и полными исходными разделами, подготовленная с ИИ-ассистентом; не независимая экспертная разметка. Ошибка темы или неполнота не равны галлюцинации. Считается ответ с хотя бы одним неподтвержденным или противоречащим источнику фактическим утверждением среди всех принятых ответов.",
+  "configurations": [
+    {
+      "name": "qwen3-1.7b-en-v2-k1-verified",
+      "transcript": "coursework/eval/results/final/qwen3-1.7b-en-v2-k1-verified.json",
+      "sha256": "3e53cec94a8bad66155acb9805f8313535ed6e426f5bcd5ef6a80e108df19c35",
+      "labels": [
+        {
+          "id": "q01",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Число 0.63 и вывод верны, но ответ длиннее запрошенного и оборван после слова Ответ."
+        },
+        {
+          "id": "q02",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q03",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "в тексте не приводится явного упоминания о предположении о шуме",
+              "reason": "Оговорка неверна: заголовок найденного раздела прямо называет гауссовский шум. Основной ответ о типе шума верен.",
+              "source": "lectures/01/why-loss.md",
+              "evidence_quote": "Гауссовский шум дает MSE"
+            }
+          ]
+        },
+        {
+          "id": "q04",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q05",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Верное определение кросс-энтропии, но семейство Бернулли не названо: ответ не решает вопрос."
+        },
+        {
+          "id": "q06",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q07",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q08",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Английские query/key/value верны; автоматический шаблон не зачел перевод query как вопрос."
+        },
+        {
+          "id": "q09",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Корректное качественное объяснение уменьшения насыщения softmax, автоматические ключевые слова не совпали."
+        },
+        {
+          "id": "q10",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q11",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q12",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "Размер матрицы внимания растет линейно по $n$",
+              "reason": "Внимание требует n на n элементов; линейная стоимость относится к проекциям и FFN, а не к матрице внимания.",
+              "source": "lectures/02/why-attention.md",
+              "evidence_quote": "Удвоили $n$, учетверили работу внимания."
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q14",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "Перплексия рассчитывается как минус логарифм вероятности текста, деленный на количество слов.",
+              "reason": "Это описание среднего NLL, пропущена экспонента. Определение перплексии неверно.",
+              "source": "lectures/03/how-training-works.md",
+              "evidence_quote": "Перплексия это экспонента от лосса"
+            }
+          ]
+        },
+        {
+          "id": "q15",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Факт о двух состояниях Adam подтвержден, но запрошенное имя AdamW не дано."
+        },
+        {
+          "id": "q16",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Формула 6ND верна. Ссылка [n] осталась шаблоном; структурированный список источников все равно выдан."
+        },
+        {
+          "id": "q17",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q18",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q19",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "так как они не влияют на предсказание ответа",
+              "reason": "Прямое противоречие: промпт влияет на ответ через внимание, хотя исключен из суммы лосса.",
+              "source": "lectures/04/how-assistants-are-made.md",
+              "evidence_quote": "Токены промпта модель читает, через внимание они влияют на предсказание ответа"
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Описана экономия токенов/KV-кеша, но само отключение размышлений не объяснено явно."
+        },
+        {
+          "id": "q21",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "\"модель награды\"",
+              "reason": "Имя вероятностной модели выбора перепутано с нейросетью награды; в источнике названа модель Брэдли и Терри.",
+              "source": "lectures/04/how-assistants-are-made.md",
+              "evidence_quote": "Связь между числом и выбором задает модель Брэдли и Терри"
+            }
+          ]
+        },
+        {
+          "id": "q22",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q23",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q24",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q25",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q26",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q27",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q28",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q29",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q30",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q31",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q32",
+          "refused": true,
+          "unsupported_claims": []
+        }
+      ]
+    },
+    {
+      "name": "qwen3-1.7b-en-v2-k3-verified",
+      "transcript": "coursework/eval/results/final/qwen3-1.7b-en-v2-k3-verified.json",
+      "sha256": "80a6a02394c55b8f30432376045daccc4d6e21e5fb2796748822f086cd84517e",
+      "labels": [
+        {
+          "id": "q01",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q02",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q03",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q04",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q05",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Общие верные слова про кросс-энтропию, но Бернулли не названо. Ответ оборван лимитом генерации."
+        },
+        {
+          "id": "q06",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Цитата про различие вероятности и правдоподобия взята из текста, но не отвечает на вопрос о ширине пика."
+        },
+        {
+          "id": "q07",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q08",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q09",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q10",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q11",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q12",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Каждая ось n действительно растет линейно. Не сказано главное — элементов n^2. Это неполный двусмысленный ответ, а не явно ложный факт."
+        },
+        {
+          "id": "q13",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q14",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q15",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "это регуляризация",
+              "reason": "Два дополнительных числа — состояния Adam. Регуляризация в источнике относится к weight decay, а не к хранению состояний.",
+              "source": "lectures/03/how-training-works.md",
+              "evidence_quote": "Буква W означает weight decay: на каждом шаге параметры чуть притягиваются к нулю, это регуляризация."
+            }
+          ]
+        },
+        {
+          "id": "q16",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q17",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "примерно 11 токенов на параметр",
+              "reason": "Число 11 перенесено с числа повторных предъявлений учебного корпуса. Оптимум Chinchilla в источнике около 20 токенов на параметр.",
+              "source": "lectures/03/how-training-works.md",
+              "evidence_quote": "оптимум лежит около 20 токенов на параметр"
+            }
+          ]
+        },
+        {
+          "id": "q18",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q19",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "так как они не влияют на предсказание ответа",
+              "reason": "Промпт влияет на ответ через внимание. Маска исключает прямой лосс на его позициях, а не влияние контекста.",
+              "source": "lectures/04/how-assistants-are-made.md",
+              "evidence_quote": "Токены промпта модель читает, через внимание они влияют на предсказание ответа"
+            }
+          ]
+        },
+        {
+          "id": "q20",
+          "refused": false,
+          "unsupported_claims": [],
+          "note": "Экономия ресурсов обоснована источником. Упоминание высокой точности спорно: отключение reasoning ее не гарантирует, но прямого обещания роста точности здесь нет."
+        },
+        {
+          "id": "q21",
+          "refused": false,
+          "unsupported_claims": [
+            {
+              "claim": "\"модель награды\"",
+              "reason": "Вероятностная модель предпочтения Брэдли–Терри перепутана с нейросетью награды.",
+              "source": "lectures/04/how-assistants-are-made.md",
+              "evidence_quote": "Связь между числом и выбором задает модель Брэдли и Терри"
+            }
+          ]
+        },
+        {
+          "id": "q22",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q23",
+          "refused": false,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q24",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q25",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q26",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q27",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q28",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q29",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q30",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q31",
+          "refused": true,
+          "unsupported_claims": []
+        },
+        {
+          "id": "q32",
+          "refused": true,
+          "unsupported_claims": []
+        }
+      ]
+    }
+  ]
+}

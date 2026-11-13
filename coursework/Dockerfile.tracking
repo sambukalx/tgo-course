@@ -2,4 +2,4 @@ FROM python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf107
 ENV PYTHONUNBUFFERED=1 PYTHONUTF8=1
 RUN pip install --no-cache-dir mlflow==3.18.0
 EXPOSE 5000
-CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000", "--backend-store-uri", "sqlite:////state/mlflow.sqlite", "--artifacts-destination", "/state/artifacts", "--serve-artifacts", "--allowed-hosts", "localhost:*,127.0.0.1:*,mlflow:*"]
+CMD ["mlflow", "server", "--host", "0.0.0.0", "--port", "5000", "--workers", "1", "--backend-store-uri", "sqlite:////state/mlflow.sqlite", "--artifacts-destination", "/state/artifacts", "--serve-artifacts", "--allowed-hosts", "localhost:*,127.0.0.1:*,mlflow:*"]

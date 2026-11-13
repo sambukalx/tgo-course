@@ -23,10 +23,13 @@ services:
     build:
       context: ..
       dockerfile: coursework/Dockerfile.tracking
+    environment:
+      MLFLOW_SERVER_ENABLE_JOB_EXECUTION: "false"
     ports:
       - "127.0.0.1:${MLFLOW_PORT:-5000}:5000"
     volumes:
       - tracking_state:/state
+    mem_limit: 2g
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health', timeout=5)"]
       interval: 10s

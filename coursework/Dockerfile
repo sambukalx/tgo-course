@@ -4,7 +4,7 @@ WORKDIR /app
 COPY coursework/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu \
     && pip install --no-cache-dir -r /tmp/requirements.txt
-COPY coursework /app/coursework
+COPY coursework/__init__.py coursework/api.py coursework/engine.py coursework/retrieval.py coursework/storage.py /app/coursework/
 COPY lectures /app/lectures
 ENV COURSE_ROOT=/app COURSE_STATE=/state HF_HOME=/models
 EXPOSE 8000

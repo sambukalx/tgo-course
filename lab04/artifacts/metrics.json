@@ -1,0 +1,75 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "dataset": "mteb/GeoreviewClassification",
+  "dataset_revision": "fb29d6137c54550329411023aee45a8ff29f0c62",
+  "n_test": 1000,
+  "fast": false,
+  "class_counts": {
+    "1": 191,
+    "2": 196,
+    "3": 193,
+    "4": 214,
+    "5": 206
+  },
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "seed": 42,
+  "review_budget": 167,
+  "batch_size": 16,
+  "threads": 12,
+  "max_new_tokens": 3,
+  "modes": {
+    "zero_shot": {
+      "accuracy": 0.22,
+      "f1_macro": 0.08313474339193075,
+      "f1_per_class": {
+        "1": 0.010416666666666666,
+        "2": 0.020202020202020204,
+        "3": 0.030456852791878174,
+        "4": 0.35459817729908866,
+        "5": 0.0
+      },
+      "mae_stars": 1.353,
+      "invalid": 0,
+      "invalid_fraction": 0.0,
+      "sec_per_example": 0.5133202672000043,
+      "peak_memory_gb": 4.7512054443359375,
+      "prompt_tokens": 188.524
+    },
+    "few_shot": {
+      "accuracy": 0.224,
+      "f1_macro": 0.09063345452062062,
+      "f1_per_class": {
+        "1": 0.010416666666666666,
+        "2": 0.01015228426395939,
+        "3": 0.020512820512820513,
+        "4": 0.3554817275747508,
+        "5": 0.05660377358490566
+      },
+      "mae_stars": 1.351,
+      "invalid": 0,
+      "invalid_fraction": 0.0,
+      "sec_per_example": 1.6390016720000131,
+      "peak_memory_gb": 6.6921234130859375,
+      "prompt_tokens": 741.524
+    },
+    "adapter": {
+      "accuracy": 0.563,
+      "f1_macro": 0.5443954736277139,
+      "f1_per_class": {
+        "1": 0.6115288220551378,
+        "2": 0.3865546218487395,
+        "3": 0.41225626740947074,
+        "4": 0.5329815303430079,
+        "5": 0.7786561264822134
+      },
+      "mae_stars": 0.558,
+      "invalid": 0,
+      "invalid_fraction": 0.0,
+      "sec_per_example": 0.5760577054000169,
+      "peak_memory_gb": 4.5662078857421875,
+      "prompt_tokens": 188.524
+    }
+  }
+}

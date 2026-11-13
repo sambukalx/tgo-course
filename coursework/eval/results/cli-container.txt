@@ -1,0 +1,140 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 388B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 766B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 258B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 826B 0.0s done
+#5 DONE 0.1s
+
+#6 [1/6] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 0.1s done
+#6 DONE 0.1s
+
+#7 [2/6] WORKDIR /app
+#7 CACHED
+
+#8 [3/6] COPY coursework/requirements.txt /tmp/requirements.txt
+#8 CACHED
+
+#9 [4/6] RUN pip install --no-cache-dir torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu     && pip install --no-cache-dir -r /tmp/requirements.txt
+#9 CACHED
+
+#10 [5/6] COPY coursework/__init__.py coursework/api.py coursework/engine.py coursework/retrieval.py coursework/storage.py /app/coursework/
+#10 CACHED
+
+#11 [6/6] COPY lectures /app/lectures
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:ddf4228a710bf1ab7a9e264d6480b09e9eba540a981de14623951f9b3b1cac66 done
+#12 exporting config sha256:edcfd27cb6e343432ba4648f429c90c40b63b5c81f66429d9df0d00a54a74f7d done
+#12 exporting attestation manifest sha256:876cf6e5e3f8647c66623dfe8601807394bb1b99f8aba8c2848b269267492f87 0.1s done
+#12 exporting manifest list sha256:d19748b01d345018ca45a7c9802cb14dd70c1a2d363fb67ba4494782015669b1
+#12 exporting manifest list sha256:d19748b01d345018ca45a7c9802cb14dd70c1a2d363fb67ba4494782015669b1 0.0s done
+#12 naming to docker.io/library/tgo-course-api:latest done
+#12 unpacking to docker.io/library/tgo-course-api:latest 0.0s done
+#12 DONE 0.2s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+#1 [internal] load local bake definitions
+#1 reading from stdin 693B 0.0s done
+#1 DONE 0.0s
+
+#2 [api internal] load build definition from Dockerfile
+#2 transferring dockerfile: 766B done
+#2 DONE 0.0s
+
+#3 [cli internal] load build definition from Dockerfile.cli
+#3 transferring dockerfile: 258B done
+#3 DONE 0.0s
+
+#4 [api internal] load metadata for docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#4 DONE 0.0s
+
+#5 [api internal] load .dockerignore
+#5 transferring context: 258B done
+#5 DONE 0.0s
+
+#6 [cli internal] load build context
+#6 transferring context: 2.77kB done
+#6 DONE 0.0s
+
+#7 [cli 1/3] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#7 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 0.1s done
+#7 DONE 0.1s
+
+#8 [cli 2/3] WORKDIR /app
+#8 CACHED
+
+#9 [cli 3/3] COPY coursework/cli.py /app/cli.py
+#9 CACHED
+
+#10 [cli] exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:fe6116557c216f785ff897d406ef1a937e4aec9faa35b26203fb5b493ecab6db done
+#10 exporting config sha256:c7b7de8391299156654c95dd2bff9c43e5997eaaa067384cc7e78e59aa8d1067 done
+#10 ...
+
+#11 [api internal] load build context
+#11 transferring context: 2.93MB 0.1s done
+#11 DONE 0.1s
+
+#12 [api 4/6] RUN pip install --no-cache-dir torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu     && pip install --no-cache-dir -r /tmp/requirements.txt
+#12 CACHED
+
+#13 [api 5/6] COPY coursework/__init__.py coursework/api.py coursework/engine.py coursework/retrieval.py coursework/storage.py /app/coursework/
+#13 CACHED
+
+#8 [api 2/3] WORKDIR /app
+#8 CACHED
+
+#14 [api 3/6] COPY coursework/requirements.txt /tmp/requirements.txt
+#14 CACHED
+
+#15 [api 6/6] COPY lectures /app/lectures
+#15 CACHED
+
+#10 [cli] exporting to image
+#10 exporting attestation manifest sha256:a504d7e7cf35555bef55620234c189146cbd510b02be07adc8a1cac2b6da578f 0.1s done
+#10 exporting manifest list sha256:b3c7babf161fc43f26019985c6337368f2409593bf5c28b7eda41e1745f0b010
+#10 exporting manifest list sha256:b3c7babf161fc43f26019985c6337368f2409593bf5c28b7eda41e1745f0b010 0.1s done
+#10 naming to docker.io/library/tgo-course-cli:latest 0.1s done
+#10 unpacking to docker.io/library/tgo-course-cli:latest
+#10 unpacking to docker.io/library/tgo-course-cli:latest 0.0s done
+#10 DONE 0.3s
+
+#16 [api] exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:ddf4228a710bf1ab7a9e264d6480b09e9eba540a981de14623951f9b3b1cac66 0.0s done
+#16 exporting config sha256:edcfd27cb6e343432ba4648f429c90c40b63b5c81f66429d9df0d00a54a74f7d 0.0s done
+#16 exporting attestation manifest sha256:a5542ffd71f5bd91c976cd94591ae7981df184e3145a2d0c1a7c7a0cf6f5a208 0.2s done
+#16 exporting manifest list sha256:1ae1054da33ebaae1959f16d33d81c201beb720270d6853415117475dcc9952c
+#16 exporting manifest list sha256:1ae1054da33ebaae1959f16d33d81c201beb720270d6853415117475dcc9952c 0.0s done
+#16 naming to docker.io/library/tgo-course-api:latest done
+#16 unpacking to docker.io/library/tgo-course-api:latest 0.0s done
+#16 DONE 0.4s
+
+#17 [cli] resolving provenance for metadata file
+#17 DONE 0.0s
+
+#18 [api] resolving provenance for metadata file
+#18 DONE 0.0s
+В найденных материалах нет подтвержденного ответа.
+Время: 12.50 с; токенов: 9; проверяющая модель: не проверялся
+[1] lectures/04/how-assistants-are-made.md — 4. Обучение на предпочтениях: модель награды (score=0.795)
+[2] lectures/03/how-training-works.md — 3. Один шаг обучения (score=0.794)
+[3] lectures/03/how-training-works.md — 3. Один шаг обучения (score=0.791)

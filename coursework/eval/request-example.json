@@ -1,0 +1,5 @@
+{
+  "question": "Что означает weight decay в AdamW?",
+  "top_k": 3,
+  "verify": true
+}
