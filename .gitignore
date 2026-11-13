@@ -31,3 +31,9 @@ tools/
 .venv-*/
 .pytest_cache/
 *.pyc
+
+# Рабочие базы и кеши курсовой; экспорт экспериментов хранится отдельно
+coursework/state/
+coursework/mlruns/
+coursework/**/mlruns/
+coursework/.env

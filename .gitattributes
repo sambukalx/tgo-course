@@ -7,3 +7,9 @@ lab??/**/*.csv text eol=lf
 *.safetensors -text
 *.png -text
 *.pdf -text
+coursework/**/*.py text eol=lf
+coursework/**/*.md text eol=lf
+coursework/**/*.json text eol=lf
+coursework/**/*.jsonl text eol=lf
+coursework/**/*.ipynb text eol=lf
+coursework/**/*.yml text eol=lf

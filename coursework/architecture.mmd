@@ -1,0 +1,10 @@
+flowchart LR
+    user[Студент] --> cli[CLI: Python stdlib]
+    cli -->|HTTP JSON /ask| api[FastAPI: RAG и проверка]
+    docs[4 заметки курса] -->|Markdown / чанки| qdrant[(Qdrant local: векторы E5)]
+    api <-->|cosine top-k| qdrant
+    api <-->|PyTorch CPU| qwen[Qwen3-0.6B: ответ и второй проход]
+    api -->|SQL| sqlite[(SQLite: запросы и ответы)]
+    sqlite --> metrics[/HTTP /metrics/]
+    evaluation[32 эталонных вопроса] -->|HTTP /ask| api
+    evaluation -->|Tracking API| mlflow[MLflow: параметры, метрики, артефакты]
