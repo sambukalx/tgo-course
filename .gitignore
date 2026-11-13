@@ -17,7 +17,7 @@ part-time/assignments/*/solution/
 !*/artifacts/*.csv
 !assignments/*/examples/*.csv
 !part-time/assignments/*/examples/*.csv
-*/corpus.txt
+**/corpus.txt
 *.pt
 
 # заочники: колоды не коммитятся, как и у очников
@@ -28,5 +28,6 @@ tools/
 
 # Локальные материалы курса и окружение проверки
 .course/
+.venv-*/
 .pytest_cache/
 *.pyc
